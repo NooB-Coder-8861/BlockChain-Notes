@@ -2,7 +2,7 @@
 
 #### 'require' and user defined access specifiers :
 ~~~ sol
-pragma solidity 0.5.8;
+pragma solidity 0.5.1;
 
 contract MyContract{
 
@@ -41,7 +41,7 @@ contract MyContract{
 
 #### ETH transfer : 
 ~~~ sol
-pragma solidity 0.5.8;
+pragma solidity 0.5.1;
 
 contract MyContract1{
 
