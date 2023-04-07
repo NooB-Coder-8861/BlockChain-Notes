@@ -2,7 +2,7 @@
 
 #### 'require' and user defined access specifiers :
 ~~~ sol
-pragma solidity 0.5.8;
+pragma solidity 0.5.1;
 
 contract MyContract{
 
@@ -41,7 +41,7 @@ contract MyContract{
 
 #### ETH transfer : 
 ~~~ sol
-pragma solidity 0.5.8;
+pragma solidity 0.5.1;
 
 contract MyContract1{
 
@@ -94,6 +94,7 @@ contract myContract{
     }
 }
 ~~~
+<<<<<<< HEAD
 
 #### Creating own librery and using it :
 ###### Librery
@@ -153,3 +154,5 @@ contract MyContract{
     }
 }
 ~~~
+=======
+>>>>>>> 48bb7f689efcd1055ca5ff859701129c4c656abb
