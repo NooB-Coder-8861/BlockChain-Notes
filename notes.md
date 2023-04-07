@@ -93,7 +93,7 @@ contract myContract{
         _token.mint();
     }
 }
-
+```
 
 #### Creating own librery and using it :
 ###### Librery
