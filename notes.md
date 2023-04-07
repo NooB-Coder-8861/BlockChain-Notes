@@ -1,7 +1,7 @@
 # Solidity
 
 #### 'require' and user defined access specifiers :
-~~~ sol
+ ```sol
 pragma solidity 0.5.1;
 
 contract MyContract{
@@ -37,10 +37,10 @@ contract MyContract{
         people[count] = Person(count, _fname, _lname);
     }
 }
-~~~
+```
 
 #### ETH transfer : 
-~~~ sol
+``` sol
 pragma solidity 0.5.1;
 
 contract MyContract1{
@@ -63,10 +63,10 @@ contract MyContract1{
         wallet.transfer(msg.value);
     }
 }
-~~~
+```
 
 #### Calling one Smart Contract from another Smart Contract :
-~~~ sol
+``` sol
 pragma solidity 0.5.1;
 
 contract ERC20token {
@@ -93,12 +93,11 @@ contract myContract{
         _token.mint();
     }
 }
-~~~
-<<<<<<< HEAD
+
 
 #### Creating own librery and using it :
 ###### Librery
-~~~ sol
+``` sol
 pragma solidity 0.5.1;
 
 library MathLibrary{
@@ -125,10 +124,10 @@ library MathLibrary{
     }
 
 }
-~~~
+```
 
 ###### Smart Contract :
-~~~ sol
+``` sol
 pragma solidity 0.5.1;
 
 import "tests/library/MathLibrary.sol";
@@ -153,6 +152,4 @@ contract MyContract{
         value = MathLibrary.div(a,b);
     }
 }
-~~~
-=======
->>>>>>> 48bb7f689efcd1055ca5ff859701129c4c656abb
+```
