@@ -94,3 +94,62 @@ contract myContract{
     }
 }
 ~~~
+
+#### Creating own librery and using it :
+###### Librery
+~~~ sol
+pragma solidity 0.5.1;
+
+library MathLibrary{
+
+    function div(int a,int b) internal pure returns(int){
+        require(b != 0);
+        int c = a/b;
+        return c;
+    }
+
+    function mul(int a,int b) internal pure returns(int){
+        int c = a*b;
+        return c;
+    }
+
+    function add(int a,int b) internal pure returns(int){
+        int c = a+b;
+        return c;
+    }
+
+    function sub(int a,int b) internal pure returns(int){
+        int c = a-b;
+        return c;
+    }
+
+}
+~~~
+
+###### Smart Contract :
+~~~ sol
+pragma solidity 0.5.1;
+
+import "tests/library/MathLibrary.sol";
+
+contract MyContract{
+    
+    int public value;
+
+    function Adition(int a, int b) public{
+        value = MathLibrary.add(a,b);
+    }
+
+    function Subtraction(int a, int b) public{
+        value = MathLibrary.sub(a,b);
+    }
+
+    function Multiplication(int a, int b) public{
+        value = MathLibrary.mul(a,b);
+    }
+
+    function Deviation(int a, int b) public{
+        value = MathLibrary.div(a,b);
+    }
+}
+~~~
