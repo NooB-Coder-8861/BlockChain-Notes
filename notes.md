@@ -153,3 +153,32 @@ contract MyContract{
     }
 }
 ```
+#### Escrow Acount (3rd party in a trade setelment)
+```sol
+pragma solidity 0.5.1;
+
+contract Escrow{
+
+    address agent;
+    mapping (address => uint) public deposits;
+
+    constructor () public{
+        agent = msg.sender;
+    }
+    modifier onlyAgent(){
+        require(msg.sender==agent);
+        _;
+    }
+
+    function deposit(address payee) public payable{
+        uint amount= msg.value;
+        deposits[payee] = deposits[payee]+amount;
+    }
+
+    function withdraw(address payable payee) public onlyAgent {
+        uint payment= deposits[payee];
+        deposits[payee]=0;
+        payee.transfer(payment);
+    }
+}
+```
