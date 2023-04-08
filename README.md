@@ -1,2 +1,1 @@
-# Solidity
-Solidity Notes
+# Solidity 
