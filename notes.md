@@ -186,7 +186,7 @@ contract Escrow{
 ```sol
 pragma solidity 0.5.1;
 
-import "C:\Users\sayan\OneDrive\Desktop\Sol\Solidity\DAPP token Smart Contract.md"; //DAPP token 
+import "https://github.com/NooB-Coder-8861/Solidity/blob/main/DAPP%20token%20Smart%20Contract.md"; //DAPP token 
 
 contract tokenTimeLock{
     Token public token;
