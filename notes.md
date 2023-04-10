@@ -126,7 +126,7 @@ library MathLibrary{
 }
 ```
 
-###### Smart Contract :
+###### Smart Contract
 ``` sol
 pragma solidity 0.5.1;
 
@@ -153,7 +153,7 @@ contract MyContract{
     }
 }
 ```
-#### Escrow Acount (3rd party in a trade setelment)
+#### Escrow Acount (3rd party in a trade setelment) :
 ```sol
 pragma solidity 0.5.1;
 
@@ -179,6 +179,33 @@ contract Escrow{
         uint payment= deposits[payee];
         deposits[payee]=0;
         payee.transfer(payment);
+    }
+}
+```
+#### Smart Contract Time Lock :
+```sol
+pragma solidity 0.5.1;
+
+import "C:\Users\sayan\OneDrive\Desktop\Sol\Solidity\DAPP token Smart Contract.md"; //DAPP token 
+
+contract tokenTimeLock{
+    Token public token;
+    address public beneficiary;
+    uint public releaseTime;
+
+    constructor(Token _token, address _beneficiary, uint _releaseTime) public{
+        require(_releaseTime > block.timestamp);
+        token = _token;
+        beneficiary = _beneficiary;
+        releaseTime = _releaseTime;
+    }
+
+    function release() public payable{
+        require(block.timestamp >= releaseTime);
+        uint amount= token. balanceOf(address(this));
+        require( amount > 0);
+
+        token.transfer(beneficiary,amount);
     }
 }
 ```
